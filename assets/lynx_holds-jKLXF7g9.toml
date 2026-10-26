@@ -1,0 +1,11 @@
+# The top of the pyramid. A lynx takes roe deer, so it needs woodland for cover and a deer population worth hunting,
+# and it is elusive enough that a survey rarely counts it: holding it for two springs is the evidence.
+id = "lynx_holds"
+name = "The lynx holds"
+description = "Surveys count a lynx at two springs running."
+
+[condition]
+type = "species_counted"
+species = "eurasian_lynx"
+count = 1
+surveys = 2

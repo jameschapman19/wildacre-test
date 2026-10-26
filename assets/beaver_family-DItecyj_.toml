@@ -1,0 +1,10 @@
+# A released beaver family has to establish: the survey sees about a third of animals, so three counted is a family.
+id = "beaver_family"
+name = "A beaver family"
+description = "Surveys count at least three beavers at three springs running. They must be released first."
+
+[condition]
+type = "species_counted"
+species = "eurasian_beaver"
+count = 3
+surveys = 3

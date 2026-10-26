@@ -1,0 +1,9 @@
+# Declares intent to graze lightly; actual pressure will depend on where herds are (M3).
+id = "light_grazing"
+name = "Light grazing"
+works_per_cell = 0.08   # works to change one cell to this regime
+works_upkeep_per_cell = 0.002   # works each cell under this regime costs to keep up each season
+grazing_pressure = 0.25
+drain_multiplier = 1.0
+cropped = false
+crop_cover = 0.0

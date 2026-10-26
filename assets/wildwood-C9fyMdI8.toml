@@ -1,0 +1,10 @@
+# Woodland takes decades to establish, so this is a long game.
+id = "wildwood"
+name = "Wildwood"
+description = "Open and closed woodland cover eight percent of the estate at three springs running."
+
+[condition]
+type = "habitat_share"
+guild = "woodland"
+percent = 8.0
+surveys = 3

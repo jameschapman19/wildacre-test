@@ -1,0 +1,43 @@
+# Purple emperor (Apatura iris): a butterfly of large, mature broadleaved woodland. The caterpillars feed
+# only on sallow (goat willow), which grows in damp rides and woodland edges, and the adults gather in the
+# canopy. It is slow to colonise, so it needs sizeable connected woodland with wet edges.
+# Sources: Butterfly Conservation species account and Millennium Atlas of Butterflies. Rates tuned to the
+# weekly step. A rare arrival from the wider countryside.
+id = "purple_emperor"
+name = "Purple emperor"
+capacity_per_ha = 0.4
+growth_per_week = 0.03
+mortality_per_week = 0.02
+dispersal_per_week = 0.03
+dispersal_radius = 3               # flies over gaps in suitable habitat
+step_weeks = 8
+phase_weeks = 0
+extinction_density = 0.000005
+initial_fraction = 0.0
+detection = 0.1                # spring survey: canopy butterfly that comes down rarely; famously hard to see
+
+[habitat_preference]
+open_woodland = 1.0
+closed_woodland = 0.7
+wetland = 0.4
+scrub = 0.3
+
+# Mature trees.
+[[responses]]
+variable = "tree_cover"
+zero_below = 0.2
+full_from = 0.5
+full_to = 1.0
+zero_above = 1.01
+
+# Sallow needs damp ground.
+[[responses]]
+variable = "water_table"
+zero_below = -1.0
+full_from = -0.5
+full_to = 0.5
+zero_above = 1.1
+
+[sighting]
+group = "insect"
+seasonal_visibility = [0.0, 1.0, 0.1, 0.0]  # spring, summer, autumn, winter: on the wing in July and August

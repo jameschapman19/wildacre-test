@@ -1,0 +1,6 @@
+# Appearance only: ecological parameters and replay identity are unchanged.
+[species_appearance.red_fox]
+sprite = "sprites/fox.png"
+motion = "amble"
+size = 4.0
+limit = 3

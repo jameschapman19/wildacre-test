@@ -1,0 +1,12 @@
+# Leaky dam: a woody-debris dam across a stream that slows the flow and lets water spill onto the
+# floodplain, as in natural flood management schemes (Pickering's Slow the Flow project, Yorkshire).
+# It only works on the stream. It acts through the same retention routine as a beaver dam.
+id = "leaky_dam"
+name = "Leaky dam"
+works_per_cell = 60   # works for each cell the tool changes
+unlock = { habitat = "wetland", min_cells = 1000 }   # a dam needs a wet valley behind it
+
+[[effects]]
+placement = "channel"
+hold = 0.6
+retention_mm_per_week = 40.0

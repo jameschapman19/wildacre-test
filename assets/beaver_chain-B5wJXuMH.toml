@@ -1,0 +1,8 @@
+# The chain the design is built around: beaver, wetland, dragonfly, hobby. Checked from survey evidence, never scripted.
+id = "beaver_chain"
+name = "A chain you built"
+description = "Surveys have caught a beaver, a wetland species its works make room for, and a predator of that species."
+
+[condition]
+type = "web_chains"
+chains = 1

@@ -1,0 +1,36 @@
+# Signal crayfish (Pacifastacus leniusculus): the invasive. Introduced from North America in the 1970s for
+# farming, now the dominant crayfish in much of lowland England, where it displaced the native white-clawed
+# crayfish (carrying crayfish plague), eats invertebrates and fish eggs and burrows into banks.
+# It spreads upstream along watercourses (documented rates of a kilometre or more a year) and is stopped
+# by barriers such as weirs, which the player can build. It lives only in water here.
+# Densities are individuals per hectare of watercourse cell: good river habitat holds a few per square
+# metre, so thousands per hectare. Sources: GB Non-native Species Secretariat factsheet and CABI invasive
+# species compendium; rates tuned to the game's weekly step.
+id = "signal_crayfish"
+name = "Signal crayfish"
+capacity_per_ha = 5000.0
+growth_per_week = 0.06
+mortality_per_week = 0.01
+dispersal_per_week = 0.15         # about a kilometre upstream a year along the channel
+step_weeks = 8
+phase_weeks = 4
+extinction_density = 0.5
+initial_fraction = 0.0            # arrives from downstream, never present at the start
+weir_excluded = true             # cannot pass a weir
+detection = 0.001                # spring survey: trapped samples of an enormous population
+front = true                   # drawn as an invasion front: pushes up the stream from downstream
+
+[habitat_preference]
+open_water = 1.0
+
+# Takes dragonfly larvae wherever the two share water. Crayfish do not depend on them (efficiency 0).
+[[eats]]
+prey = "dragonflies"
+max_intake_per_week = 0.02
+half_saturation = 3.0
+efficiency = 0.0
+max_fraction = 0.5
+
+[sighting]
+group = "crustacean"
+seasonal_visibility = [0.2, 1.0, 0.7, 0.1]

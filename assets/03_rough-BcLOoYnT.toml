@@ -1,0 +1,23 @@
+id = "rough"
+name = "Rough grassland"
+
+# Classification: habitats are tested from the highest priority down and the first whose conditions
+# all hold wins. The lowest-priority habitat has no conditions and is the fallback. A margin keeps a
+# cell in this habitat a little beyond the bounds, so cells on a threshold do not flicker.
+guild = "grassland"
+priority = 30
+works_per_cell_per_season = 0.003   # works each cell of this habitat adds to the estate's seasonal allowance
+yield_group = "grassland"                  # cells of a group pay less each as the group takes over the estate
+
+# Starting soil fertility and vegetation cover for cells of this habitat.
+initial_nutrients = 0.4
+
+[initial_cover]
+herb = 0.9
+shrub = 0.05
+tree = 0.0
+
+[[conditions]]
+variable = "herb_cover"
+min = 0.3
+margin = 0.05

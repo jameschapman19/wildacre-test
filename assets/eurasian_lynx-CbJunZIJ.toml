@@ -1,0 +1,59 @@
+# Eurasian lynx (Lynx lynx): the medium-sized cat of northern forests, an ambush hunter of roe deer, killing one
+# about every week. Extinct in Britain for well over a thousand years and the subject of a live reintroduction
+# debate. A territory is tens of square kilometres, so on a map of 164 square kilometres it is a species the whole
+# estate holds together, not one parcel: it is the top of the pyramid because nothing else can support it.
+# Sources: Kielder Lynx Project feasibility summaries and published lynx-roe studies in Europe. Rates tuned to the
+# game's weekly step. Not present at the start; arrives only when deer, woodland and cover are plentiful enough
+# for it to settle.
+id = "eurasian_lynx"
+name = "Eurasian lynx"
+capacity_per_ha = 0.0004
+growth_per_week = 0.0
+mortality_per_week = 0.0015
+dispersal_per_week = 0.03
+dispersal_radius = 4               # crosses open country between woods
+step_weeks = 13
+phase_weeks = 9
+extinction_density = 0.000002
+initial_fraction = 0.0
+detection = 0.2                # spring survey: elusive, but tracks and camera traps give a few a year
+
+[habitat_preference]
+closed_woodland = 1.0
+open_woodland = 1.0
+scrub = 0.8
+rough = 0.2
+wetland = 0.2
+
+[[eats]]
+prey = "roe_deer"
+max_intake_per_week = 1.2
+half_saturation = 0.05
+efficiency = 0.003
+max_fraction = 0.3
+
+[[eats]]
+prey = "fallow_deer"
+max_intake_per_week = 0.8
+half_saturation = 0.1
+efficiency = 0.003
+max_fraction = 0.3
+
+[[eats]]
+prey = "red_fox"
+max_intake_per_week = 0.15
+half_saturation = 0.01
+efficiency = 0.02
+max_fraction = 0.2
+
+[[eats]]
+prey = "rabbit"
+max_intake_per_week = 2.0
+half_saturation = 10.0
+efficiency = 0.0006
+max_fraction = 0.2
+
+[sighting]
+group = "mammal"
+seasonal_visibility = [0.6, 0.6, 0.8, 1.0]  # tracks in snow: easiest to find in winter
+names = ["Tufts", "Shade", "Birch", "Ghost", "Rowan", "Frost"]  # individuals the player comes to know, in the order they are first seen

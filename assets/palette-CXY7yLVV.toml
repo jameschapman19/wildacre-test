@@ -1,0 +1,8 @@
+# An appearance-only layer. No ecological data or animal placement is changed.
+[species_appearance.red_fox]
+shape = "fox"
+motion = "amble"
+body = "#8c6460"
+accent = "#fff0d9"
+size = 4.0
+limit = 3

@@ -1,0 +1,10 @@
+# Barn owls need rough grassland with voles, which grazing and ploughing both remove.
+id = "owls_over_rough_grass"
+name = "Owls over the rough grass"
+description = "Surveys count at least five barn owls at three springs running."
+
+[condition]
+type = "species_counted"
+species = "barn_owl"
+count = 5
+surveys = 3

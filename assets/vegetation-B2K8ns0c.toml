@@ -1,0 +1,64 @@
+# Vegetation: three layers of cover (0 to 1 of a hectare cell) that grow, compete for light, seed into
+# neighbouring cells and are removed by grazing. Habitat is classified from these, never set directly.
+# Shrub and tree seed_per_week weight the summed seed-source cover of neighbouring cells; the herb value is a
+# constant seed bank. Moisture ranges are soil saturation (0 to 1).
+
+[herb]
+growth_per_week = 0.3
+capacity = 1.0
+mortality_per_week = 0.01
+grazing_loss_per_week = 0.08
+nutrient_floor = 0.4
+phenology = [0.0, 0.1, 0.4, 0.8, 1.0, 1.0, 0.9, 0.7, 0.4, 0.15, 0.0, 0.0]
+seed_per_week = 0.002
+seed_grazing_suppression = 0.0
+sward_resistance = 0.0
+establishment_cover = 0.0
+[herb.moisture]
+dry_limit = 0.1
+dry_optimum = 0.3
+wet_optimum = 0.95
+wet_limit = 1.01
+
+[shrub]
+growth_per_week = 0.12
+capacity = 1.0
+mortality_per_week = 0.002
+grazing_loss_per_week = 0.15
+nutrient_floor = 0.6
+phenology = [0.0, 0.0, 0.3, 0.8, 1.0, 1.0, 1.0, 0.8, 0.4, 0.1, 0.0, 0.0]
+seed_per_week = 0.0015
+seed_grazing_suppression = 0.95
+sward_resistance = 0.8
+establishment_cover = 0.05
+[shrub.moisture]
+dry_limit = 0.3
+dry_optimum = 0.5
+wet_optimum = 0.85
+wet_limit = 0.97
+
+[tree]
+growth_per_week = 0.02
+capacity = 1.0
+mortality_per_week = 0.001
+grazing_loss_per_week = 0.02
+nutrient_floor = 0.6
+phenology = [0.0, 0.0, 0.2, 0.7, 1.0, 1.0, 1.0, 0.8, 0.4, 0.1, 0.0, 0.0]
+seed_per_week = 0.002
+seed_grazing_suppression = 0.9
+sward_resistance = 0.9
+establishment_cover = 0.05
+[tree.moisture]
+dry_limit = 0.4
+dry_optimum = 0.6
+wet_optimum = 0.85
+wet_limit = 0.95
+
+[shading]
+tree_on_shrub = 0.7
+tree_on_herb = 0.6
+shrub_on_herb = 0.4
+
+[seed_kernel]
+ring1 = 0.3
+ring2 = 0.06

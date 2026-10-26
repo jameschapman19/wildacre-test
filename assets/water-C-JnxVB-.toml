@@ -1,0 +1,29 @@
+# Weekly water balance. Depths are millimetres over a one-hectare cell unless stated.
+# Values describe a lowland English clay-loam: ~725 mm rain and ~500 mm potential evapotranspiration a year.
+soil_capacity_mm = 300.0            # water held by the soil column when saturated
+field_capacity_fraction = 0.6       # fraction of capacity held against gravity; the rest can drain
+critical_saturation = 0.5           # below this saturation plants and soil evaporate less than demanded
+infiltration_mm_per_week = 60.0     # most surface water that can soak in per week
+lateral_fraction = 0.08             # weekly fraction of water above field capacity creeping downslope
+lateral_reference_slope = 0.1       # drop per cell (metres) at and above which lateral flow is full rate; flats pass little
+channel_accumulation = 600.0        # catchment (cells) above which a cell is the stream that field drains discharge to
+percolation_fraction = 0.06         # weekly fraction of water above field capacity lost to deep groundwater
+runoff_fraction = 0.7               # weekly fraction of surface water running to the next cell
+drain_rate = 0.5                    # weekly fraction of water above field capacity a full-strength drain sheds
+backwater_decay = 0.93              # fraction of a dam's backwater carried one cell further up the channel
+backwater_full_retention_mm = 30.0  # weekly retention at which the channel is fully ponded and drains into it stop
+max_water_table_depth_m = 1.5       # water table depth when the soil is empty, metres
+initial_saturation = 0.7            # saturation of every cell before the spin-up
+spinup_years = 3                    # years of average weather run before the sim starts, so year one is in seasonal equilibrium
+
+# Mean weekly values by month, January to December. Rain is scaled by the year's weather index.
+rain_mm_per_week = [20.0, 16.3, 15.0, 13.8, 13.8, 12.5, 13.8, 15.0, 15.0, 18.8, 21.3, 21.3]
+pet_mm_per_week = [2.0, 3.0, 6.0, 10.0, 15.0, 19.0, 20.0, 17.0, 12.0, 7.0, 3.5, 2.0]
+
+# What the player's tools build wears away each year, a fraction of what is left. Re-applying a tool renews it
+# and costs works only for what has worn. Beavers' dams do not wear: a family keeps them up for free.
+[tool_wear_per_year]
+drain_block = 0.03     # blocked field drains slowly reopen
+pool_capacity = 0.12   # scrapes silt up in a few years
+flow_hold = 0.06       # woody dams loosen
+retention = 0.10       # and rot, in about a decade

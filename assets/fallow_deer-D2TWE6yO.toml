@@ -1,0 +1,36 @@
+# Fallow deer (Dama dama): a herding grazer and browser, introduced centuries ago and now widespread.
+# Lives in larger groups and higher densities than roe and grazes grass as well as browsing. Not present on
+# the estate at the start: it comes in from neighbouring land (M2.4) and spreads wherever there is cover and
+# grazing, which with no culling soon pressures the scrub front.
+# Sources: Mammal Society species account and Deer Initiative density guidance (0.1 to 0.5 per hectare
+# locally); rates tuned to the weekly step.
+id = "fallow_deer"
+name = "Fallow deer"
+capacity_per_ha = 0.4
+growth_per_week = 0.012
+mortality_per_week = 0.003
+dispersal_per_week = 0.03
+step_weeks = 13
+phase_weeks = 10
+extinction_density = 0.001
+initial_fraction = 0.0
+fence_excluded = true          # deer cannot cross a fence line, so fenced ground is out of reach
+grazing_pressure_per_ha = 0.7    # at capacity, 0.28 pressure: noticeably holds ground open
+cullable = true                # the player can cull it
+cull_effort_per_year = 50       # stalkers can take about this many a year across the estate, so choose where
+detection = 0.5                # spring survey: counts of herds in open ground
+crop_damage_per_ha = 3.0   # share of a field's yield lost per animal per hectare: deer in the crop
+front = true                   # drawn as an invasion front: pressure spilling over from neighbouring land
+
+[habitat_preference]
+open_woodland = 1.0
+rough = 0.8
+improved = 0.9
+scrub = 0.6
+closed_woodland = 0.6
+arable = 0.5
+wetland = 0.3
+
+[sighting]
+group = "mammal"
+seasonal_visibility = [1.0, 1.0, 1.0, 1.0]

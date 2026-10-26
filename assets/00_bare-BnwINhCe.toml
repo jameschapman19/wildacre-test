@@ -1,0 +1,15 @@
+id = "bare"
+name = "Bare ground"
+
+# Classification: habitats are tested from the highest priority down and the first whose conditions
+# all hold wins. The lowest-priority habitat has no conditions and is the fallback. A margin keeps a
+# cell in this habitat a little beyond the bounds, so cells on a threshold do not flicker.
+priority = 0
+
+# Starting soil fertility and vegetation cover for cells of this habitat.
+initial_nutrients = 0.2
+
+[initial_cover]
+herb = 0.0
+shrub = 0.0
+tree = 0.0

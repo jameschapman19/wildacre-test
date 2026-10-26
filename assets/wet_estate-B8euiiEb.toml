@@ -1,0 +1,10 @@
+# Wetland and open water at a tenth of the estate. The habitat map shows this plainly, so it uses true cell counts.
+id = "wet_estate"
+name = "A wet estate"
+description = "Wetland and open water cover a tenth of the estate at three springs running."
+
+[condition]
+type = "habitat_share"
+guild = "wetland"
+percent = 10.0
+surveys = 3

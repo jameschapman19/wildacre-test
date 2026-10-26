@@ -1,0 +1,10 @@
+# The sequel to "A wet estate": a floodplain restored on a scale that pushes water onto neighbouring fields.
+id = "mere_and_marsh"
+name = "Mere and marsh"
+description = "Wetland and open water cover a fifth of the estate at five springs running."
+
+[condition]
+type = "habitat_share"
+guild = "wetland"
+percent = 20.0
+surveys = 5

@@ -1,0 +1,8 @@
+# Score from the web of life: species, feeding links, depth and engineered chains. An idle estate reaches about 52 in thirty years, once the apex species wander in.
+id = "rich_web"
+name = "A rich web"
+description = "The web of life reaches 60: more species, more links, and an engineered chain."
+
+[condition]
+type = "web_score"
+score = 60

@@ -1,0 +1,31 @@
+# Tamworth pigs: a rare breed of hardy, ginger outdoor pig used to open ground by rooting. Rooting turns
+# over turf and bracken and makes seedbeds for trees and flowers; acorns and beech mast are a seasonal
+# food. Pigs are more sensitive to short rations than cattle or ponies. Sources: Rare Breeds Survival Trust;
+# Knepp and Wild Ken Hill accounts of pigs in rewilding.
+id = "tamworth_pigs"
+name = "Tamworth pigs"
+works_per_head = 2   # works per head to bring a herd in
+works_upkeep_per_head = 0.4   # works each head costs every season (feed, vet, a herdsman)
+unlock = { habitat = "closed_woodland", min_cells = 650 }   # pigs need woodland to root in
+need_per_head = 1.0
+grazing_pressure_per_ha = 0.25
+recovery_per_week = 0.05
+loss_per_week = 0.1
+attrition_below = 0.35
+attrition_per_week = 0.04
+movement_cost_per_cell = 0.005
+max_size = 100
+
+[forage]
+herb = 0.25
+shrub = 0.05
+tree = 0.1
+
+# Rooting strips the sward and opens bare seedbeds.
+[[effects]]
+layer = "herb"
+clears_per_ha = 0.03
+
+[[effects]]
+layer = "shrub"
+clears_per_ha = 0.01

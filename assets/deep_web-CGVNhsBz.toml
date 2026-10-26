@@ -1,0 +1,10 @@
+# A stretch goal. With the current roster the web tops out at about 68 in thirty years (nineteen species, fourteen
+# links, three trophic levels, three engineered chains), so this needs more feeding links caught than any scripted
+# strategy manages.
+id = "deep_web"
+name = "A deep web"
+description = "The web of life reaches 72: more feeding links caught than a wet valley alone provides."
+
+[condition]
+type = "web_score"
+score = 72

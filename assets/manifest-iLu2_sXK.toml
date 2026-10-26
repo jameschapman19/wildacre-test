@@ -1,0 +1,8 @@
+id = "heathland"
+version = "0.1.0"
+api_version = 1
+kind = "content"
+
+[[dependencies]]
+id = "core"
+version = "^0.1"

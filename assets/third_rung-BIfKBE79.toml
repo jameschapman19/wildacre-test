@@ -1,0 +1,10 @@
+# The pyramid's third rung: a predator that eats predators. Needs a fox or otter on the second rung, a lynx or otter
+# above it, and surveys that catch all three, so it asks for a whole stack, not one species.
+id = "third_rung"
+name = "A third rung"
+description = "Surveys count something on each of three rungs of the pyramid at three springs running."
+
+[condition]
+type = "trophic_levels"
+levels = 3
+surveys = 3

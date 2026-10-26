@@ -1,0 +1,35 @@
+# Roe deer (Capreolus capreolus): a shy browser of woodland edge and scrub, widespread in lowland Britain.
+# Densities in British lowland woodland and farmland are typically 0.05 to 0.2 per hectare. A browser: it
+# needs shrub and tree cover for shelter and food and adds browsing pressure that holds back young scrub.
+# Sources: Mammal Society species account and the Deer Initiative / BDS density guidance; rates tuned to the
+# weekly step. Without predators or culling, density rises until forage runs short.
+id = "roe_deer"
+name = "Roe deer"
+capacity_per_ha = 0.2
+growth_per_week = 0.012          # about a third a year in good conditions
+mortality_per_week = 0.003
+dispersal_per_week = 0.04
+step_weeks = 13
+phase_weeks = 2
+extinction_density = 0.001
+initial_fraction = 0.3
+fence_excluded = true          # deer cannot cross a fence line, so fenced ground is out of reach
+grazing_pressure_per_ha = 0.4    # at capacity, 0.08 pressure: enough to thin seedlings, not to clear a hedge
+cullable = true                # the player can cull it
+cull_effort_per_year = 120       # stalkers can take about this many a year across the estate, so choose where
+detection = 0.4                # spring survey: dawn counts along rides and field edges
+crop_damage_per_ha = 2.4   # share of a field's yield lost per animal per hectare: deer in the crop
+front = true                   # drawn as an invasion front: pressure spilling over from neighbouring land
+
+[habitat_preference]
+open_woodland = 1.0
+scrub = 1.0
+closed_woodland = 0.8
+rough = 0.6
+arable = 0.4
+improved = 0.4
+wetland = 0.3
+
+[sighting]
+group = "mammal"
+seasonal_visibility = [1.0, 1.0, 1.0, 1.0]

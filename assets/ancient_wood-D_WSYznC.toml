@@ -1,0 +1,11 @@
+# The long sequel to "Wildwood": woodland that has had decades to close. Needs the tree-planting-free route of
+# scrub, then open woodland, then closed canopy, held for five springs.
+id = "ancient_wood"
+name = "An ancient wood"
+description = "Open and closed woodland cover fifteen percent of the estate at five springs running."
+
+[condition]
+type = "habitat_share"
+guild = "woodland"
+percent = 15.0
+surveys = 5

@@ -1,0 +1,10 @@
+# Nightingales come late, once scrub has thickened.
+id = "nightingale_scrub"
+name = "Nightingales in the scrub"
+description = "Surveys count at least fifteen nightingales at three springs running."
+
+[condition]
+type = "species_counted"
+species = "nightingale"
+count = 15
+surveys = 3

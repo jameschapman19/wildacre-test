@@ -1,0 +1,8 @@
+# No management. Succession runs freely.
+id = "hands_off"
+name = "Hands-off"
+works_per_cell = 0.04   # works to change one cell to this regime
+grazing_pressure = 0.0
+drain_multiplier = 1.0
+cropped = false
+crop_cover = 0.0

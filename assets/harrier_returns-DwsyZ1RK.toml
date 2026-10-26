@@ -1,0 +1,10 @@
+# Marsh harriers need a wetland big enough to hold a territory and voles around it, so they say the base is sound.
+id = "harrier_returns"
+name = "Harriers over the reeds"
+description = "Surveys count three marsh harriers at three springs running."
+
+[condition]
+type = "species_counted"
+species = "marsh_harrier"
+count = 3
+surveys = 3

@@ -1,0 +1,10 @@
+# Hobbies hunt dragonflies over water, so they follow the wetland. Idle estates count about two; a wet estate about five.
+id = "hobby_over_water"
+name = "Hobbies over the water"
+description = "Surveys count at least four hobbies at three springs running: something is hunting the wetland insects."
+
+[condition]
+type = "species_counted"
+species = "hobby"
+count = 4
+surveys = 3

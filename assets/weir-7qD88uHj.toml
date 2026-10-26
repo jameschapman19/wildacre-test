@@ -1,0 +1,12 @@
+# Weir: a low barrier across the stream. It ponds water behind it and stops species that cannot
+# climb or cross it, which is how weirs and purpose-built barriers hold back signal crayfish.
+id = "weir"
+name = "Weir"
+works_per_cell = 160   # works for each cell the tool changes
+unlock = { year = 2 }   # the crayfish are a problem for later
+
+[[effects]]
+placement = "channel"
+barrier = true
+hold = 0.3
+pool_capacity_mm = 150.0

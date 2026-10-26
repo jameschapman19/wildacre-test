@@ -1,0 +1,8 @@
+# Drains blocked within the zone, so the water table rises.
+id = "wet"
+name = "Wet"
+works_per_cell = 0.3   # works to change one cell to this regime
+grazing_pressure = 0.0
+drain_multiplier = 0.0
+cropped = false
+crop_cover = 0.0

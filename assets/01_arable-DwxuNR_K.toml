@@ -1,0 +1,21 @@
+id = "arable"
+name = "Arable"
+
+# Classification: habitats are tested from the highest priority down and the first whose conditions
+# all hold wins. The lowest-priority habitat has no conditions and is the fallback. A margin keeps a
+# cell in this habitat a little beyond the bounds, so cells on a threshold do not flicker.
+priority = 90
+works_per_cell_per_season = 0.005   # farming income: works each cell adds to the estate's seasonal allowance
+farmed = true   # the works it earns are crops, which wildlife can damage
+
+# Starting soil fertility and vegetation cover for cells of this habitat.
+initial_nutrients = 0.9
+
+[initial_cover]
+herb = 0.8
+shrub = 0.0
+tree = 0.0
+
+[[conditions]]
+variable = "cropped"
+min = 1.0

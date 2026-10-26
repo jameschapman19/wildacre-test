@@ -1,0 +1,10 @@
+# A scrub frontier: the thorny, tangled habitat that nightingales and turtle doves need.
+id = "scrub_mosaic"
+name = "A scrub mosaic"
+description = "Scrub covers fifteen percent of the estate at three springs running."
+
+[condition]
+type = "habitat_share"
+guild = "scrub"
+percent = 15.0
+surveys = 3

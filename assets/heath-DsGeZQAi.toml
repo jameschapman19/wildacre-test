@@ -1,0 +1,31 @@
+# An example land definition using the existing cover/soil model; see the README's simplification.
+id = "heath"
+name = "Heath"
+initial_nutrients = 0.25
+priority = 45
+
+[initial_cover]
+herb = 0.6
+shrub = 0.3
+tree = 0.02
+
+[[conditions]]
+variable = "nutrients"
+max = 0.4
+margin = 0.03
+
+[[conditions]]
+variable = "shrub_cover"
+min = 0.2
+max = 0.55
+margin = 0.03
+
+[[conditions]]
+variable = "tree_cover"
+max = 0.15
+margin = 0.02
+
+[[conditions]]
+variable = "water_table"
+min = 0.4
+margin = 0.05

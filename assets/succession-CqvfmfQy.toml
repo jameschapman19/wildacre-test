@@ -1,0 +1,7 @@
+# Habitat is classified from the sim's variables each week: the highest-priority habitat whose
+# conditions all hold wins (see habitats/*.toml). Herb cover and the water table are smoothed with a
+# moving average first, so habitat follows the year's character, not the week's weather.
+smoothing_weeks = 52.0
+
+# Habitat changes slowly, so it is reclassified once a month rather than every week.
+classify_every_weeks = 4

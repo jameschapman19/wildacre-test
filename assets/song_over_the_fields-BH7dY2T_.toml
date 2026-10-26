@@ -1,0 +1,10 @@
+# Skylarks boom on open grassland and fall away as scrub closes it, so this wants the right balance.
+id = "song_over_the_fields"
+name = "Song over the fields"
+description = "Surveys count at least fifteen hundred skylarks at three springs running."
+
+[condition]
+type = "species_counted"
+species = "skylark"
+count = 1500
+surveys = 3
