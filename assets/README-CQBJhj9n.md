@@ -17,3 +17,10 @@ For the web build, append `?content=core,examples/heathland&skins=skins/default,
 `wildlife-coats` is an appearance-only example for an existing species: append `?skins=skins/default,examples/wildlife-coats` to change fox coat/scale while preserving the simulation and replay. Logical add-ons can supply the same optional illustration tables for their new species.
 
 `fox-art` replaces the default fox PNG with an original silver-grey coat variant. Append `?skins=skins/default,examples/fox-art`; the state hash and replay remain unchanged. A skin can use the same `sprite` field for added species, herd kinds or group fallbacks. The PNGs and their Canvas generation source are original project content.
+
+
+## Added management choices
+
+`estate-tools` adds a regime and a water tool using the existing Hands-off and drain-blocking effects. `estate-tools-skin` supplies the added regime's colour independently. This is an example of extending the command palette with data; neither definition needs a renderer or UI special case.
+
+Use `?content=core,examples/estate-tools&skins=skins/default,examples/estate-tools-skin` in the web build. Open Manage estate: Land includes Meadow recovery along the upper valley, and Water includes Floodplain drain works. The new actions use the same quotes, unlock validation and replay commands as core choices. The long regime name also exercises ordinary palette layout. The companion skin can be edited without changing the simulation's identity.

@@ -1,0 +1,11 @@
+# Raise a bund: bank up half a metre of earth along a line so water running off a field is held back behind it.
+# Low bunds across a field's lower edge are used to hold floodwater on the land and spread it over a meadow. Banks
+# slump over the years and need building up again.
+id = "raise_bund"
+name = "Raise bund"
+works_per_cell = 5   # works for each cell the tool changes
+unlock = { year = 2 }
+
+[[effects]]
+bund_m = 0.5
+hold = 0.3

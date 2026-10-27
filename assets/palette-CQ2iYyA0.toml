@@ -236,6 +236,24 @@ scale = "linear"
 low = "#333d42"
 high = "#e6e3da"
 
+[field_ramps.dig]
+label = "Ground dug out"
+unit = "m"
+min = 0.0
+max = 3.0
+scale = "linear"
+low = "#333d42"
+high = "#52cfe5"
+
+[field_ramps.bund]
+label = "Ground banked up"
+unit = "m"
+min = 0.0
+max = 3.0
+scale = "linear"
+low = "#333d42"
+high = "#d9a35b"
+
 # Enlarged representative figures. These control appearance only, never populations.
 
 [species_appearance.rabbit]

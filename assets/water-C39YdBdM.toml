@@ -27,3 +27,5 @@ drain_block = 0.03     # blocked field drains slowly reopen
 pool_capacity = 0.12   # scrapes silt up in a few years
 flow_hold = 0.06       # woody dams loosen
 retention = 0.10       # and rot, in about a decade
+dig = 0.04             # dug ponds silt back in over a couple of decades
+bund = 0.06            # banks slump

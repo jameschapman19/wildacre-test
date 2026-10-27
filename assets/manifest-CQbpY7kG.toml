@@ -1,0 +1,8 @@
+id = "estate-tools-skin"
+version = "0.1.0"
+api_version = 1
+kind = "skin"
+
+[[dependencies]]
+id = "estate-tools"
+version = "^0.1"

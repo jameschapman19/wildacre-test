@@ -1,0 +1,7 @@
+# An added tool using core's existing drain-blocking effect; no additional simulation rule.
+id = "floodplain_drains"
+name = "Floodplain drain works"
+works_per_cell = 0.24
+
+[[effects]]
+drain_block = 1.0
