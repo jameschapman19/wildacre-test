@@ -7,7 +7,7 @@
 # for it to settle.
 id = "eurasian_lynx"
 name = "Eurasian lynx"
-capacity_per_ha = 0.0004
+capacity_per_ha = 0.001
 growth_per_week = 0.0
 mortality_per_week = 0.0015
 dispersal_per_week = 0.03
@@ -24,6 +24,14 @@ open_woodland = 1.0
 scrub = 0.8
 rough = 0.2
 wetland = 0.2
+
+# Needs real forest: a hedgerow is not cover for a lynx, so the cell must carry a tree canopy.
+[[responses]]
+variable = "tree_cover"
+zero_below = 0.0
+full_from = 0.12
+full_to = 1.0
+zero_above = 1.01
 
 [[eats]]
 prey = "roe_deer"
