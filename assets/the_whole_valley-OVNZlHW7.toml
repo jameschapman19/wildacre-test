@@ -1,0 +1,8 @@
+# Growth: the whole map. Every neighbour's field is in the player's hands.
+id = "the_whole_valley"
+name = "The whole valley"
+description = "The estate holds every hectare of the map at one spring survey."
+
+[condition]
+type = "estate_size"
+cells = 16384

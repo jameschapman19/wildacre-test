@@ -1,0 +1,41 @@
+# Eurasian hobby (Falco subbuteo): a small falcon that arrives in late spring and breeds in old crows'
+# nests in trees and tall hedges, hunting dragonflies and swallows over water and heathland. It follows its
+# insect prey, so wetlands rich in dragonflies draw it in. Densities of one pair per 300 hectares or less.
+# Sources: BTO BirdFacts and Birds of the Western Palearctic summary. Rates tuned to the weekly step. Not
+# present at the start; arrives from the wider countryside.
+id = "hobby"
+name = "Eurasian hobby"
+works_per_season = 6.0   # works a season the species adds to the estate once established: the food web pays
+works_full_population = 8   # individuals on the estate's own land at which it pays in full
+capacity_per_ha = 0.006
+growth_per_week = 0.0
+mortality_per_week = 0.008
+dispersal_per_week = 0.06
+dispersal_radius = 4               # flies over gaps in suitable habitat
+step_weeks = 13
+phase_weeks = 8
+extinction_density = 0.000005
+initial_fraction = 0.0
+detection = 0.4                # spring survey: conspicuous over open water in summer
+
+[habitat_preference]
+open_woodland = 1.0
+wetland = 0.9
+scrub = 0.6
+closed_woodland = 0.5
+open_water = 0.7
+rough = 0.5
+improved = 0.3
+arable = 0.3
+
+[[eats]]
+prey = "dragonflies"
+max_intake_per_week = 25.0
+half_saturation = 6.0
+efficiency = 0.0015
+max_fraction = 0.3
+
+[sighting]
+group = "bird"
+seasonal_visibility = [0.4, 1.0, 0.4, 0.0]  # spring, summer, autumn, winter: a summer visitor
+names = ["Scythe", "Dart", "Stoop", "Flit", "Arrow", "Slate"]  # individuals the player comes to know, in the order they are first seen

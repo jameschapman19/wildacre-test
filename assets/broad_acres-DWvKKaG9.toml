@@ -1,0 +1,9 @@
+# Growth: half the map. The core starts with a quarter (4,096 cells), so this means taking in four parcels.
+id = "broad_acres"
+name = "Broad acres"
+description = "The estate holds half the map, eight thousand hectares, at two springs running."
+
+[condition]
+type = "estate_size"
+cells = 8192
+surveys = 2

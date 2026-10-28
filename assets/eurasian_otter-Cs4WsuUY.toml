@@ -1,0 +1,38 @@
+# Eurasian otter (Lutra lutra): a semi-aquatic predator of rivers, ponds and fen, back in every English county
+# after the pesticide crash of the 1960s. Mostly fish, but where signal crayfish are abundant they become a main
+# prey, and otters are one of the few natural checks on them. A territory is a few kilometres of river, so a
+# lowland estate holds a handful at most. Not present at the start; wanders in along the water.
+# Sources: Mammal Society species account; Environment Agency otter and crayfish studies. Rates tuned to the
+# game's weekly step.
+id = "eurasian_otter"
+name = "Eurasian otter"
+works_per_season = 10.0   # works a season the species adds to the estate once established: the food web pays
+works_full_population = 2   # individuals on the estate's own land at which it pays in full
+capacity_per_ha = 0.05
+growth_per_week = 0.0
+mortality_per_week = 0.004
+dispersal_per_week = 0.05
+dispersal_radius = 3
+step_weeks = 13
+phase_weeks = 5
+extinction_density = 0.00001
+initial_fraction = 0.0
+detection = 0.1                # spring survey: shy and mostly nocturnal; signs more than sightings
+
+[habitat_preference]
+open_water = 1.0
+wetland = 0.8
+rough = 0.1
+scrub = 0.1
+
+[[eats]]
+prey = "signal_crayfish"
+max_intake_per_week = 230.0
+half_saturation = 400.0
+efficiency = 0.00004
+max_fraction = 0.2
+
+[sighting]
+group = "mammal"
+seasonal_visibility = [1.0, 1.0, 1.0, 1.0]
+names = ["Ripple", "Sedge", "Lutra", "Brook", "Mink", "Eddy"]  # individuals the player comes to know, in the order they are first seen

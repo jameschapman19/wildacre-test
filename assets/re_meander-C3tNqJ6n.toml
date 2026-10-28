@@ -1,0 +1,16 @@
+# Re-meander: put bends back into a straightened stream. A longer path slows the water and the old
+# floodplain is reconnected, so the ground around the channel stays wet. Modelled as flow held back on
+# the channel and on the floodplain beside it, plus part of the field drains there blocked.
+id = "re_meander"
+name = "Re-meander"
+works_per_cell = 2.4   # works for each cell the tool changes
+unlock = { habitat = "wetland", min_cells = 900 }   # reworking the stream is for an estate that has already gone wet
+
+[[effects]]
+placement = "channel"
+hold = 0.5
+
+[[effects]]
+placement = "floodplain"
+hold = 0.3
+drain_block = 0.5

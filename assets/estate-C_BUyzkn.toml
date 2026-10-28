@@ -1,0 +1,159 @@
+id = "estate"
+name = "The Estate"
+size = 128
+# Habitat layer: one pixel per one-hectare cell. Each distinct pixel colour maps to a habitat below,
+# so the map can be repainted in any image editor.
+habitat_layer = "scenarios/estate_habitat.png"
+
+# Elevation layer: 16-bit greyscale PNG, 0 = elevation_min metres and 65535 = elevation_max metres.
+elevation_layer = "scenarios/estate_elevation.png"
+elevation_min = 30.0
+elevation_max = 90.0
+
+# Field-drain layer: 8-bit greyscale PNG, 0 = undrained and 255 = fully drained.
+drain_layer = "scenarios/estate_drain.png"
+
+# Regime layer: each distinct pixel colour maps to a regime below.
+regime_layer = "scenarios/estate_regime.png"
+
+# What the estate can change over time. Every regime, tool, herd and release has a cost in works; the estate
+# earns `per_season` works each season and banks up to `cap`.
+# Tools and herds unlock as the estate grows into them: regimes, tools, herd kinds and releases that declare an
+# `unlock` stay closed until the estate reaches it.
+progression = true
+
+# The estate starts as the middle of the valley, a quarter of the map. The rest belongs to the neighbours, who farm it;
+# parcels are numbered row by row from the top left and can be taken in beside land the estate holds.
+[parcels]
+size = 32
+works_per_cell = 0.3
+owned = [5, 6, 9, 10]
+
+[works]
+per_season = 52.0
+cap = 600.0
+start = 400.0
+waterlogged_above_m = 0.5          # crops drown where the water table's 52-week mean is shallower than half a metre
+group_comfort_share = 0.15          # a kind of wild land pays in full up to this share of the estate, then less each: a mosaic out-earns a monoculture
+
+[weather]
+# Annual growing-season index, drawn uniformly from this range each year.
+min = 0.7
+max = 1.3
+
+[[habitat_key]]
+color = "#8a7a5c"
+habitat = "bare"
+[[habitat_key]]
+color = "#d9c25a"
+habitat = "arable"
+[[habitat_key]]
+color = "#7fbf4d"
+habitat = "improved"
+[[habitat_key]]
+color = "#a8b86a"
+habitat = "rough"
+[[habitat_key]]
+color = "#5e8a3a"
+habitat = "scrub"
+[[habitat_key]]
+color = "#3f7a45"
+habitat = "open_woodland"
+[[habitat_key]]
+color = "#1f5a2e"
+habitat = "closed_woodland"
+[[habitat_key]]
+color = "#3f9a9a"
+habitat = "wetland"
+[[habitat_key]]
+color = "#2f6fb0"
+habitat = "open_water"
+
+[[regime_key]]
+color = "#c8a03c"
+regime = "arable"
+[[regime_key]]
+color = "#6b6b6b"
+regime = "hands_off"
+[[regime_key]]
+color = "#8fd16a"
+regime = "light_grazing"
+[[regime_key]]
+color = "#d17a3c"
+regime = "heavy_grazing"
+[[regime_key]]
+color = "#4aa3d6"
+regime = "wet"
+[[regime_key]]
+color = "#7a4ad6"
+regime = "fenced"
+
+# Neighbouring land on two edges has deer and no culling: they arrive at the east and north edges.
+[[boundary_inflow]]
+species = "fallow_deer"
+edge = "east"
+density_per_week = 0.004
+weather_response = 1.0              # a mild winter and a good mast year send more over the boundary
+pressure_growth_per_year = 0.05     # neighbouring herds are not culled and keep growing: 2.5 times the rate by year 30
+
+[[boundary_inflow]]
+species = "fallow_deer"
+edge = "north"
+density_per_week = 0.004
+weather_response = 1.0
+pressure_growth_per_year = 0.05
+
+# The river below the estate has signal crayfish, which come up the stream from its mouth.
+[[boundary_inflow]]
+species = "signal_crayfish"
+edge = "south"
+density_per_week = 200.0
+min_flow_accumulation = 600.0
+weather_response = 2.0              # high water carries more crayfish upstream in a wet year and few in a dry one
+
+# Summer migrants and wanderers arriving from the wider countryside: songbirds on the south edge, and fliers
+# that settle anywhere on the map where the land suits them. They only settle where the land suits them.
+[[boundary_inflow]]
+species = "turtle_dove"
+edge = "south"
+density_per_week = 0.004
+
+[[boundary_inflow]]
+species = "nightingale"
+edge = "south"
+density_per_week = 0.004
+
+[[boundary_inflow]]
+species = "purple_emperor"
+edge = "anywhere"
+density_per_week = 0.0001
+
+[[boundary_inflow]]
+species = "hobby"
+edge = "anywhere"
+density_per_week = 0.000004
+
+# The top of the pyramid arrives on its own, as rare wanderers, and stays only where the prey and the land can keep
+# it: otters up the river after crayfish, marsh harriers to wetland with voles around it, and a lynx across country
+# where roe deer are plentiful and woodland gives it cover. Nothing is released; the player builds the base.
+[[boundary_inflow]]
+species = "eurasian_otter"
+edge = "south"
+density_per_week = 0.002
+min_flow_accumulation = 600.0
+
+[[boundary_inflow]]
+species = "marsh_harrier"
+edge = "anywhere"
+density_per_week = 0.000004
+
+[[boundary_inflow]]
+species = "eurasian_lynx"
+edge = "anywhere"
+density_per_week = 0.000002
+
+# Storks wander in from the wider countryside, rarely, and stay only where wet ground and prey keep them.
+[[boundary_inflow]]
+species = "white_stork"
+edge = "anywhere"
+density_per_week = 2e-6

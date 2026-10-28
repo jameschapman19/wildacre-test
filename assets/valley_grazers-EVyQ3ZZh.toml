@@ -1,0 +1,22 @@
+# An added kind using the existing pony effects; no new simulation rule.
+id = "valley_grazers"
+name = "Valley grazers"
+works_per_head = 3.0
+works_upkeep_per_head = 0.5
+need_per_head = 1.0
+grazing_pressure_per_ha = 0.35
+recovery_per_week = 0.04
+loss_per_week = 0.05
+attrition_below = 0.25
+attrition_per_week = 0.02
+movement_cost_per_cell = 0.004
+max_size = 100
+
+[forage]
+herb = 0.4
+shrub = 0.12
+tree = 0.02
+
+[[effects]]
+layer = "shrub"
+clears_per_ha = 0.02

@@ -1,0 +1,39 @@
+# Barn owl (Tyto alba): hunts field voles over rough grassland at dusk and night, nesting in barns and old
+# hollow trees. A pair needs roughly 2,000 small mammals a year; densities are one pair per 100 to 300
+# hectares of suitable ground. Its fortunes track vole cycles and the amount of long grass left unmown.
+# Sources: Barn Owl Trust ecology summaries and BTO BirdFacts. Rates tuned to the weekly step.
+id = "barn_owl"
+name = "Barn owl"
+works_per_season = 2.0   # works a season the species adds to the estate once established: the food web pays
+works_full_population = 3   # individuals on the estate's own land at which it pays in full
+capacity_per_ha = 0.008
+growth_per_week = 0.0
+mortality_per_week = 0.004
+dispersal_per_week = 0.04
+dispersal_radius = 3               # flies over gaps in suitable habitat
+step_weeks = 13
+phase_weeks = 0
+extinction_density = 0.00001
+initial_fraction = 0.3
+detection = 0.2                # spring survey: nest-box checks and dusk watches
+
+[habitat_preference]
+rough = 1.0
+wetland = 0.6
+open_woodland = 0.6
+scrub = 0.4
+improved = 0.3
+arable = 0.2
+closed_woodland = 0.2
+
+[[eats]]
+prey = "field_vole"
+max_intake_per_week = 30.0
+half_saturation = 25.0
+efficiency = 0.0003
+max_fraction = 0.25
+
+[sighting]
+group = "bird"
+seasonal_visibility = [1.0, 1.0, 1.0, 1.0]
+names = ["Dusk", "Mallow", "Ghost", "Hollow", "Vesper", "Thistle"]  # individuals the player comes to know, in the order they are first seen

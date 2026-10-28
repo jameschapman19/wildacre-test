@@ -1,0 +1,12 @@
+# Dig a pond: take a metre of earth out of the ground so water runs to it and stays. Ponds are the standard
+# first earthwork on a wet farm: cheap, quickly colonised by dragonflies and amphibians, and a stepping stone
+# for the wetland to spread. Dug ground silts back in over the years, so a pond needs re-cutting to stay open.
+# Reaches only so far: one metre at a time, never past three.
+id = "dig_pond"
+name = "Dig pond"
+works_per_cell = 8   # works for each cell the tool changes
+unlock = { habitat = "wetland", min_cells = 200 }   # once the estate has some wet ground to learn from
+
+[[effects]]
+dig_m = 1.0
+pool_capacity_mm = 900.0

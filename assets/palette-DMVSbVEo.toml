@@ -1,0 +1,8 @@
+# Independent appearance for the added kind; figures, standards and cards share it.
+[herd_appearance."valley-grazers:herd:valley_grazers"]
+shape = "pony"
+motion = "amble"
+body = "#e4cc97"
+accent = "#665340"
+size = 3.0
+limit = 6

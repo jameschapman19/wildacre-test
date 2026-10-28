@@ -1,0 +1,48 @@
+# Common nightingale (Luscinia megarhynchos): a summer migrant to dense, low, tangled scrub and coppice,
+# often damp and close to water, where it nests near the ground under thick cover. It is lost wherever deer
+# browse the understorey away or scrub grows up into tall woodland. Territories are tiny, about one per
+# few hectares of good scrub.
+# Sources: BTO BirdFacts and RSPB research on nightingale decline and deer browsing. Rates tuned to the
+# weekly step. Not present at the start; arrives from the wider countryside.
+id = "nightingale"
+name = "Common nightingale"
+works_per_season = 3.0   # works a season the species adds to the estate once established: the food web pays
+works_full_population = 3   # individuals on the estate's own land at which it pays in full
+capacity_per_ha = 0.08
+growth_per_week = 0.02
+mortality_per_week = 0.007
+dispersal_per_week = 0.05
+dispersal_radius = 3               # flies over gaps in suitable habitat
+step_weeks = 8
+phase_weeks = 1
+extinction_density = 0.00005
+initial_fraction = 0.0
+detection = 0.3                # spring survey: singing males heard at dawn in May
+
+[habitat_preference]
+scrub = 1.0
+open_woodland = 0.6
+wetland = 0.5
+closed_woodland = 0.3
+rough = 0.1
+
+# Dense, low cover.
+[[responses]]
+variable = "shrub_cover"
+zero_below = 0.25
+full_from = 0.6
+full_to = 1.0
+zero_above = 1.01
+
+# Browsing removes it.
+[[responses]]
+variable = "grazing_pressure"
+zero_below = -1.0
+full_from = -0.5
+full_to = 0.08
+zero_above = 0.4
+
+[sighting]
+group = "bird"
+seasonal_visibility = [0.8, 1.0, 0.0, 0.0]  # spring, summer, autumn, winter: a summer visitor: here from April, gone by August
+names = ["Lyric", "Aria", "Carol", "Nocturne", "Reverie", "Cadence"]  # individuals the player comes to know, in the order they are first seen

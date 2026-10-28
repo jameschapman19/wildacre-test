@@ -1,0 +1,38 @@
+# Common kestrel (Falco tinnunculus): hovers over rough grass and verges to take voles. A pair holds a
+# territory of 50 to 100 hectares, so densities are around 0.01 per hectare. Shares its prey with the owl
+# but hunts by day, so the two rise and fall together on the same vole supply.
+# Sources: BTO BirdFacts and RSPB species account. Rates tuned to the weekly step.
+id = "kestrel"
+name = "Common kestrel"
+works_per_season = 2.0   # works a season the species adds to the estate once established: the food web pays
+works_full_population = 3   # individuals on the estate's own land at which it pays in full
+capacity_per_ha = 0.012
+growth_per_week = 0.0
+mortality_per_week = 0.004
+dispersal_per_week = 0.05
+dispersal_radius = 3               # flies over gaps in suitable habitat
+step_weeks = 13
+phase_weeks = 7
+extinction_density = 0.00001
+initial_fraction = 0.3
+detection = 0.5                # spring survey: conspicuous hovering hunters
+
+[habitat_preference]
+rough = 1.0
+improved = 0.5
+wetland = 0.5
+scrub = 0.5
+open_woodland = 0.4
+arable = 0.4
+closed_woodland = 0.1
+
+[[eats]]
+prey = "field_vole"
+max_intake_per_week = 22.0
+half_saturation = 30.0
+efficiency = 0.0004
+max_fraction = 0.25
+
+[sighting]
+group = "bird"
+seasonal_visibility = [1.0, 1.0, 1.0, 1.0]

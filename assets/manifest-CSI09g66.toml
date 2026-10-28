@@ -1,0 +1,8 @@
+id = "valley-grazers-skin"
+version = "0.1.0"
+api_version = 1
+kind = "skin"
+
+[[dependencies]]
+id = "valley-grazers"
+version = "^0.1"

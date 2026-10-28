@@ -1,8 +1,0 @@
-# Block drain: plug the field drains in the area so the water table rises. Land drains are tile or ditch
-# systems; blocking them (breaking tiles, damming ditches) is standard wetland restoration practice.
-id = "block_drain"
-name = "Block drain"
-works_per_cell = 0.24   # works for each cell the tool changes
-
-[[effects]]
-drain_block = 1.0
