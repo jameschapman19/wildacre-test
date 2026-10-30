@@ -1,0 +1,2 @@
+# A neutral data tile suppresses the default photo-derived grain without changing land colour or ecology.
+ground_detail = "details/neutral.png"

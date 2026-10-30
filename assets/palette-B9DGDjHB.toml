@@ -1,3 +1,5 @@
+ground_detail = "details/ground.png"
+
 # Presentation only: skins never affect the simulation or its hash.
 [habitat_colors]
 bare = "#aa9b82"
