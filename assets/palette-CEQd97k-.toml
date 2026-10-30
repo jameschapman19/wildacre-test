@@ -282,6 +282,7 @@ size = 2.1
 limit = 3
 
 [species_appearance.roe_deer]
+portrait = "portraits/roe_deer.png"
 shape = "deer"
 motion = "amble"
 body = "#ad7545"
@@ -304,6 +305,7 @@ size = 4.0
 limit = 3
 
 [species_appearance.barn_owl]
+portrait = "portraits/barn_owl.png"
 shape = "bird"
 motion = "fly"
 body = "#f3ead4"
