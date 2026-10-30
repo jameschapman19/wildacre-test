@@ -1,4 +1,6 @@
 ground_detail = "details/ground.png"
+rock_model = "models/rock.glb"
+flora_kit = "models/flora.glb"
 
 # Presentation only: skins never affect the simulation or its hash.
 [habitat_colors]
@@ -466,3 +468,37 @@ body = "#a08461"
 accent = "#eee4cf"
 size = 3.6
 limit = 4
+
+[flora_roles.tree]
+preserve_colour = false
+models = ["BirchTree_1", "BirchTree_4", "BirchTree_5", "NormalTree_4", "NormalTree_5"]
+height = 3.0
+cap = 160
+
+[flora_roles.dead_tree]
+models = ["DeadTree_5", "DeadTree_6", "DeadTree_9"]
+height = 2.0
+cap = 60
+
+[flora_roles.bush]
+preserve_colour = false
+models = ["Bush", "Bush_Large", "Bush_Small"]
+height = 0.72
+cap = 1200
+
+[flora_roles.flowering_bush]
+preserve_colour = false
+models = ["Bush_Flowers", "Bush_Large_Flowers", "Bush_Small_Flowers"]
+height = 0.7
+cap = 500
+
+[flora_roles.flowers]
+models = ["Flower_1", "Flower_1_Clump", "Flower_2_Clump", "Flower_3_Clump", "Flower_4_Clump", "Flower_5_Clump"]
+height = 0.52
+cap = 1500
+
+[flora_roles.tall_grass]
+preserve_colour = false
+models = ["Grass_Large", "Grass_Small"]
+height = 0.48
+cap = 3000

@@ -1,0 +1,23 @@
+# Reuses the inherited kit: this layer changes artwork selection/scale, never ecology.
+[flora_roles.tree]
+models = ["BirchTree_1", "BirchTree_4", "BirchTree_5"]
+height = 2.0
+cap = 160
+# Omitted preserve_colour defaults to true: retain the artist's warmer birch foliage.
+
+[flora_roles.bush]
+models = ["Bush_Large", "Bush_Small"]
+height = 0.65
+cap = 1200
+preserve_colour = false
+
+[flora_roles.flowers]
+models = ["Flower_4_Clump", "Flower_5_Clump"]
+height = 0.5
+cap = 1500
+
+[flora_roles.tall_grass]
+models = ["Grass_Large"]
+height = 0.4
+cap = 2200
+preserve_colour = false
