@@ -489,13 +489,21 @@ cap = 1200
 [flora_roles.flowering_bush]
 preserve_colour = false
 models = ["Bush_Flowers", "Bush_Large_Flowers", "Bush_Small_Flowers"]
-height = 0.7
+height = 1.5
 cap = 500
 
 [flora_roles.flowers]
 models = ["Flower_1", "Flower_1_Clump", "Flower_2_Clump", "Flower_3_Clump", "Flower_4_Clump", "Flower_5_Clump"]
 height = 0.52
 cap = 1500
+
+# Maize on arable ground: models are growth stages in order (sprout, young, bushy, mature, harvested stalks); the stage
+# shown follows the season, and a plant is sized against the crop's mature stage. Wheat and the other row crops are drawn
+# as rows of tufts by the props layer, because the pack's wheat is single stalks.
+[flora_roles.maize]
+models = ["Corn_1", "Corn_2", "Corn_3", "Corn_4", "Corn_Harvested"]
+height = 1.5
+cap = 600
 
 [flora_roles.tall_grass]
 preserve_colour = false
