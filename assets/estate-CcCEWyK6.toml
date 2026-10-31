@@ -27,7 +27,7 @@ progression = true
 [parcels]
 size = 32
 works_per_cell = 0.3
-owned = [5, 6, 9, 10]
+owned = [5, 6, 9, 10, 11]
 
 [works]
 per_season = 52.0

@@ -505,6 +505,33 @@ models = ["Corn_1", "Corn_2", "Corn_3", "Corn_4", "Corn_Harvested"]
 height = 1.5
 cap = 600
 
+# The farmstead: fixed in the starting estate, laid out round the bare farmyard (see web/src/farmstead.ts). Flat-colour
+# models from Quaternius' Medieval Village pack, so they keep their own colours.
+[flora_roles.farmhouse]
+models = ["House_3"]
+height = 1.9
+cap = 4
+
+[flora_roles.barn]
+models = ["Stable"]
+height = 1.9
+cap = 4
+
+[flora_roles.yard_prop]
+models = ["Well", "Cart"]
+height = 0.95
+cap = 16
+
+[flora_roles.yard_small]
+models = ["Barrel", "Hay", "Crate"]
+height = 0.36
+cap = 64
+
+[flora_roles.fence]
+models = ["Fence"]
+height = 0.34
+cap = 160
+
 [flora_roles.tall_grass]
 preserve_colour = false
 models = ["Grass_Large", "Grass_Small"]
