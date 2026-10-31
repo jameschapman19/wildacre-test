@@ -530,7 +530,18 @@ cap = 64
 [flora_roles.fence]
 models = ["Fence"]
 height = 0.34
-cap = 160
+cap = 1400
+
+# The player's works: stakes for a leaky dam and rocks for a weir, shown on the cells the tools acted on.
+[flora_roles.dam]
+models = ["DeadTree_5", "DeadTree_6", "DeadTree_9"]
+height = 0.9
+cap = 300
+
+[flora_roles.weir]
+models = ["Rock_1", "Rock_2", "Rock_3"]
+height = 0.3
+cap = 300
 
 [flora_roles.tall_grass]
 preserve_colour = false
